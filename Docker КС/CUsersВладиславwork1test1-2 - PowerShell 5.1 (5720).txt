@@ -1,0 +1,211 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
+
+C:\Users\Владислав> cd TestDock
+C:\Users\Владислав\TestDock> git branch
+fatal: not a git repository (or any of the parent directories): .git
+C:\Users\Владислав\TestDock> .git
+.git : Имя ".git" не распознано как имя командлета, функции, файла сценария или
+выполняемой программы. Проверьте правильность написания имени, а также наличие и
+ правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ .git
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (.git:String) [], CommandNotFound
+   Exception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+C:\Users\Владислав\TestDock> git init
+Initialized empty Git repository in C:/Users/Владислав/TestDock/.git/
+C:\Users\Владислав\TestDock [master]> git branch
+C:\Users\Владислав\TestDock [master]> git branch
+C:\Users\Владислав\TestDock [master]> cd ..
+C:\Users\Владислав> cd wwork
+cd : Не удается найти путь "C:\Users\Владислав\wwork", так как он не существует.
+строка:1 знак:1
++ cd wwork
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Владислав\wwork:String)
+    [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc
+   ationCommand
+
+C:\Users\Владислав> cd work
+C:\Users\Владислав\work [master]> branch
+branch : Имя "branch" не распознано как имя командлета, функции, файла сценария
+или выполняемой программы. Проверьте правильность написания имени, а также налич
+ие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ branch
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (branch:String) [], CommandNotFou
+   ndException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+C:\Users\Владислав\work [master]> git branch
+* master
+C:\Users\Владислав\work [master]> git branch Session_1_16
+C:\Users\Владислав\work [master]> git branch
+  Session_1_16
+* master
+C:\Users\Владислав\work [master]> git brancg Session_1_16 -d
+git: 'brancg' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+C:\Users\Владислав\work [master]> git branch Session_1_16 -d
+Deleted branch Session_1_16 (was 2d67701).
+C:\Users\Владислав\work [master]> git branch Session_1_16
+C:\Users\Владислав\work [master]> git branch
+  Session_1_16
+* master
+C:\Users\Владислав\work [master]> git checkout Session_1_16
+Switched to branch 'Session_1_16'
+C:\Users\Владислав\work [Session_1_16]> git branch
+* Session_1_16
+  master
+C:\Users\Владислав\work [Session_1_16]> git branch master -d
+Deleted branch master (was 2d67701).
+C:\Users\Владислав\work [Session_1_16]> git branch
+* Session_1_16
+C:\Users\Владислав\work [Session_1_16]> git checkout -b News
+Switched to a new branch 'News'
+C:\Users\Владислав\work [News]> git ls-tree --name-only -r News
+example.txt
+C:\Users\Владислав\work [News]> git push https://github.com/valentinnulifaer/probable-spork.git Session_1_16
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 249 bytes | 249.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/valentinnulifaer/probable-spork.git
+ * [new branch]      Session_1_16 -> Session_1_16
+C:\Users\Владислав\work [News]> git push -all https://github.com/valentinnulifaer/probable-spork.git
+error: did you mean `--all` (with two dashes)?
+C:\Users\Владислав\work [News]> git remote add Repo https://github.com/valentinnulifaer/probable-spork.git
+C:\Users\Владислав\work [News]> git remote -v
+Repo    https://github.com/valentinnulifaer/probable-spork.git (fetch)
+Repo    https://github.com/valentinnulifaer/probable-spork.git (push)
+C:\Users\Владислав\work [News]> git remote add Repo2 fdfdfdf
+C:\Users\Владислав\work [News]> git remote - v
+error: unknown subcommand: `-'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+
+C:\Users\Владислав\work [News]> git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+C:\Users\Владислав\work [News]> git remote -v
+Repo    https://github.com/valentinnulifaer/probable-spork.git (fetch)
+Repo    https://github.com/valentinnulifaer/probable-spork.git (push)
+Repo2   fdfdfdf (fetch)
+Repo2   fdfdfdf (push)
+C:\Users\Владислав\work [News]> git remote remove Repo2
+C:\Users\Владислав\work [News]> git remote -v
+Repo    https://github.com/valentinnulifaer/probable-spork.git (fetch)
+Repo    https://github.com/valentinnulifaer/probable-spork.git (push)
+C:\Users\Владислав\work [News]> git push -all Repo
+error: did you mean `--all` (with two dashes)?
+C:\Users\Владислав\work [News]> git push --all Repo
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'News' on GitHub by visiting:
+remote:      https://github.com/valentinnulifaer/probable-spork/pull/new/News
+remote:
+To https://github.com/valentinnulifaer/probable-spork.git
+ * [new branch]      News -> News
+C:\Users\Владислав\work [News]> cd ..
+C:\Users\Владислав> cd work1
+C:\Users\Владислав\work1> git clone https://github.com/valentinnulifaer/probable-spork.git
+Cloning into 'probable-spork'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+C:\Users\Владислав\work1> git clone https://github.com/valentinnulifaer/probable-spork.git test1-2
+Cloning into 'test1-2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+C:\Users\Владислав\work1> ls
+
+
+    Каталог: C:\Users\Владислав\work1
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        22.10.2024     14:49                probable-spork
+d-----        22.10.2024     14:50                test1-2
+
+
+C:\Users\Владислав\work1> cd test1-2
+C:\Users\Владислав\work1\test1-2 [Session_1_16 ≡]> git branch
+* Session_1_16
+C:\Users\Владислав\work1\test1-2 [Session_1_16 ≡]> git branch --all
+* Session_1_16
+  remotes/origin/HEAD -> origin/Session_1_16
+  remotes/origin/News
+  remotes/origin/Session_1_16
+C:\Users\Владислав\work1\test1-2 [Session_1_16 ≡]> cd ..
+C:\Users\Владислав\work1> git clone https://github.com/valentinnulifaer/probable-spork.git test1-2 -b News
+Cloning into 'test1-2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+C:\Users\Владислав\work1> cd test1-2
+C:\Users\Владислав\work1\test1-2 [News ≡]> git branch
+* News
+C:\Users\Владислав\work1\test1-2 [News ≡]> git branch -all
+error: did you mean `--all` (with two dashes)?
+C:\Users\Владислав\work1\test1-2 [News ≡]> git branch --all
+* News
+  remotes/origin/HEAD -> origin/Session_1_16
+  remotes/origin/News
+  remotes/origin/Session_1_16
+C:\Users\Владислав\work1\test1-2 [News ≡]> cd ..
+C:\Users\Владислав\work1> git clone https://github.com/valentinnulifaer/probable-spork.git test1-2 --single-branch -b News
+fatal: destination path 'test1-2' already exists and is not an empty directory.
+C:\Users\Владислав\work1> git clone https://github.com/valentinnulifaer/probable-spork.git test1-2 --single-branch -b News
+Cloning into 'test1-2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+C:\Users\Владислав\work1> cd test1-2
+C:\Users\Владислав\work1\test1-2 [News ≡]> git branch all
+C:\Users\Владислав\work1\test1-2 [News ≡]> git branch --all
+* News
+  all
+  remotes/origin/News
+C:\Users\Владислав\work1\test1-2 [News ≡]> git clone https://github.com/valentinnulifaer/probable-spork.git test1-2 --single-branch -b News
+C:\Users\Владислав\work1\test1-2> cd test1-2
+cd : Не удается найти путь "C:\Users\Владислав\work1\test1-2\test1-2", так как о
+н не существует.
+строка:1 знак:1
++ cd test1-2
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Владислав\work1\test1-2
+   \test1-2:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLoc
+   ationCommand
+
+C:\Users\Владислав\work1\test1-2>
